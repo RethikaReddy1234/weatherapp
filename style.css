@@ -1,0 +1,240 @@
+/* General Reset and Body Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f5f5f5;
+    transition: background-color 0.3s ease;
+  }
+  
+  body.light {
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  body.dark {
+    background-color: #121212;
+    color: #fff;
+  }
+  
+  /* Background Video Container */
+  #backgroundVideoContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+  }
+  
+  #backgroundVideo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Main Container */
+  .container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    z-index: 1;
+    text-align: center;
+  }
+  
+  /* Title */
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Controls */
+  .controls {
+    margin-bottom: 20px;
+  }
+  
+  .controls input {
+    padding: 10px;
+    font-size: 1.1rem;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 250px;
+  }
+  
+  .controls button {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border: 1px solid #0288d1;
+    background-color: #0288d1;
+    color: #fff;
+    border-radius: 5px;
+  }
+  
+  .controls button:hover {
+    background-color: #0277bd;
+  }
+  
+  /* Unit Buttons */
+  .toggle-buttons {
+    margin-top: 10px;
+  }
+  
+  .toggle-buttons button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 1px solid #0288d1;
+    background-color: #0288d1;
+    color: #fff;
+    border-radius: 5px;
+  }
+  
+  .toggle-buttons button:hover {
+    background-color: #0277bd;
+  }
+  
+  /* Theme Buttons */
+  .theme-buttons {
+    margin-top: 10px;
+  }
+  
+  .theme-buttons button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 1px solid #0288d1;
+    background-color: #0288d1;
+    color: #fff;
+    border-radius: 5px;
+  }
+  
+  .theme-buttons button:hover {
+    background-color: #0277bd;
+  }
+  
+  /* Current Temperature Display */
+  #currentTempDisplay {
+    margin-top: 30px;
+  }
+  
+  .current-temp-info h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .current-temp-info img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+  }
+  
+  .current-temp-info p {
+    font-size: 1.5rem;
+  }
+  
+  /* Forecast Cards */
+  #forecastCards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  .card {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 150px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  
+  .card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    font-size: 1.2rem;
+  }
+  
+  /* Weather Chart */
+  canvas {
+    margin-top: 30px;
+    width: 100% !important;
+    height: 400px !important;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+  
+    .controls {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .controls input {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .controls button {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    #forecastCards {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .card {
+      width: 80%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .current-temp-info img {
+      width: 60px;
+      height: 60px;
+    }
+  
+    .card img {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .card {
+      width: 100%;
+    }
+  
+    canvas {
+      height: 300px !important;
+    }
+  }
+  

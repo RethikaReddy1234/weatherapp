@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>5-Day Weather Forecast</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="light">
+  
+  <div id="backgroundVideoContainer">
+    <video id="backgroundVideo" autoplay loop muted>
+
+      <source src="cloudy.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="container">
+    <h1>Weather Forecast</h1>
+    <div class="controls">
+      <input type="text" id="cityInput" placeholder="Enter city name" />
+      <button onclick="getWeather()">Get Forecast</button>
+      <div class="toggle-buttons">
+        <button onclick="setUnit('metric')">°C</button>
+        <button onclick="setUnit('imperial')">°F</button>
+      </div>
+      <div class="theme-buttons">
+        <button onclick="setTheme('light')">Light Mode</button>
+        <button onclick="setTheme('dark')">Dark Mode</button>
+      </div>
+    </div>
+
+    <div id="currentTempDisplay" class="current-temp-display"></div>
+    <canvas id="weatherChart"></canvas>
+    <div id="forecastCards" class="forecast-cards"></div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
